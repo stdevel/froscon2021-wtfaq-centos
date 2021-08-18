@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CentOS ist tot, lang lebe CentOS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link href="css/theme.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# CentOS ist tot, lang lebe CentOS
+
+## WTFAQ: Häufig gestellte Fragen
+
+???
+
+Notes for the _first_ slide!
+---
+## `whoami`
+
+.left-column[
+
+- Christian Stankowic
+- Linux, Virtualisierung, Automatisierung
+- Every Linux is awesome!.red[*]
+- [@stankowic_devel](https://twitter.com/stankowic_devel) auf Twitter
+- [stdevel](https://github.com/stdevel) auf GitHub
+- Blog: [https://cstan.io](https://cstan.io)
+
+.footnote[.red[*] außer [Hannah Montana Linux](http://hannahmontana.sourceforge.net/)]
+
+]
+
+.right-column[
+
+![:img Avatar, 80%](imgs/avatar.jpg)
+
+]
+---
+
+# Agenda 
+- CentOS-Abkündigung
+- Aktuelle Entwicklungen
+- Alternativen
+- Ausblick
+
+
+---
+class: center, middle
+
+# CentOS-Abkündigung
+---
+## Was ist passiert?
+
+- Im Dezember 2020 wurde die **Einstellung** der CentOS-Distribution bekanntgegeben
+- EL7 wird bis 2024 gepflegt, EL8 nur bis Ende 2021 (*statt Mai 2029*)
+- Als Alternative wurden RHEL bzw. **CentOS Stream** genannt
+--
+
+- CentOS-Team hatte (*laut Board*) keinen nennenswerten Einfluss.red[*]
+- Verkaufszahlen waren "*kein Motivator*"
+- CentOS Stream sollte gepusht werden um die Entwicklung zu beschleunigen
+
+.footnote[.red.bold[*] siehe [Interview mit CentOS Board-Mitglied Brian Exelbierd](https://arstechnica.com/gadgets/2021/01/on-the-death-of-centos-red-hat-liaison-brian-exelbierd-speaks/)]
+---
+## CentOS Stream
+
+- 2019 eingeführtes neues Projekt
+- Rolling Release-Modell
+- Positioniert sich **zwischen** Fedora und RHEL
+- **Upstream** für nächstes RHEL Minor-Release (*z.B. 8.x*)
+- weniger stabil als RHEL, jedoch stabiler als Fedora
+  - kein Bleeding Edge wie bei anderen Rolling Release-Distributionen (*z.B. ArchLinux, openSUSE Tumbleweed*)
+--
+
+- Für Entwicklungs- und Testzwecke unproblematisch
+- Wenn Bugkompatiblität zu RHEL benötigt wird jedoch **ungeeignet**
+---
+class: center, middle
+
+![:img CentOS Stream, 75%](imgs/centos_stream.png)
+
+Quelle: [CentOS-Webseite](https://seven.centos.org/)
+---
+## Geschichte
+
+- **2004**: Projekt von **Gregory Kurtzer** als binärkompatibler RHEL-Klon gestartet (**Downstream**)
+- **2005**: CentOS ist so populär, dass es von Suchmaschinen **vor** RHEL angezeigt wird; RHEL bittet um Entfernung von Markenzeichen
+  - Community weigert sich [und trollt Red Hat](https://tech.slashdot.org/story/05/03/02/1739228/centos-40-released)
+  - Red Hat setzt Anwälte an
+  - Kurtzer verlässt kurzerhand das Projekt
+--
+
+- **2014**: CentOS wird Bestandteil von Red Hat, 4 Entwickler werden angestellt
+  - Red Hat verspricht **keine drastischen** Änderungen vorzunehmen
+- **2019**: CentOS Stream vorgestellt
+
+???
+
+- Alle Vorkommnisse von Red Hat wurden durch PNAELV (*Prominent North American Enterprise Linux Vendor*) ersetzt
+- Projekt hatte Höhen und Tiefen, Dramen durch unwillige Community-Mitglieder
+- Seit Übernahme von Red Hat stabilere Prozesse
+---
+class: center, middle
+
+# Aktuelle Entwicklungen
+---
+## Red Hat lenkt ein
+
+Community reagierte.red[*] ablehnend, lenkte Red Hat ein:
+
+- **Red Hat Developer Subscription** wird erweitert:
+  - bis zu 16 Systeme
+  - auch ausdrücklich Produktion und Cloud-Nutzung erlaubt
+  - kein Support-Anspruch
+  - Red Hat Kundenkonto benötigt
+- Lösung nur für kleinere Kund:innen anwendbar
+
+.footnote[.red.bold[*] siehe z.B. [folgende Petition](https://www.change.org/p/centos-governing-board-do-not-destroy-centos-by-using-it-as-a-rhel-upstream) oder [centos.rip](https://centos.rip)]
+
+???
+
+Die Petition erreicht in kurzer Zeit 10.000 Unterschriften
+---
+## Red Hat lenkt ein
+
+- Neu ist auch die **Developer Subscription for Teams**:
+  - bis zu 25.000 Systeme
+  - ausschließlich für Entwicklungssysteme
+  - Beantragung über **Sales Associate**
+  - Gegen **Aufpreis** auch Support
+--
+
+- Nur für Kund:innen anwendbar, die **reine Entwicklungsumgebungen** auf CentOS betrieben haben
+---
+## Forks
+
+Innerhalb weniger Tage entstanden mehrere Projekte:
+
+- [Rocky Linux](https://rockylinux.org/)
+- [AlmaLinux](https://almalinux.org/) (*aka Codename Lenix*)
+- [Navy Linux](https://www.Navy Linux.org/)
+---
+## Rocky Linux.red[*]
+
+.left-column75[
+
+- Von **Gregory Kurtzer** erstellter CentOS-Fork
+- 100% Bug-kompatibel mit RHEL
+- `x86_64` und `aarch64`-Architekturen
+- Unabhängige gemeinnützige Organisation (*RESF*), spendenfinanziert
+  - Darf laut **Linux Foundation** offiziell den Namen **Linux** tragen
+
+.footnote[.red.bold[*] Rocky McGaugh (†), erstellte die ersten CentOS-Builds]
+
+]
+
+.right-column25[
+
+![:img Rocky Linux-Logo, 100%](imgs/rocky_linux.png)
+
+]
+
+???
+
+- **R**ocky **E**nterprise **S**oftware **F**oundation
+---
+## Rocky Linux.red[*]
+
+.left-column75[
+
+- [Communitysatzung](https://forums.rockylinux.org/t/community-charter/1933) und [bessere Struktur](https://forums.rockylinux.org/t/organizational-structure/1932) soll Probleme verhindern
+- Build-Infrastruktur u.a. auf AWS
+- RC erschien Ende April auf Basis von 8.3
+- Stabile Version im **Juni** erschienen (*8.4*)
+
+]
+
+.right-column25[
+
+![:img Rocky Linux-Logo, 100%](imgs/rocky_linux.png)
+
+]
+
+???
+
+- **R**ocky **E**nterprise **S**oftware **F**oundation
+---
+## AlmaLinux.red[*]
+
+.left-column75[
+
+- Von [CloudLinux](https://www.cloudlinux.com/) erstellter RHEL-Fork
+  - Distributor und Hoster
+  - Hat mit [CloudLinux OS](https://www.cloudlinux.com/all-products/product-overview/cloudlinuxos) schon einen kommerziellen RHEL-Fork erstellt
+- 100% Bug-kompatibel mit RHEL
+- zuerst `x86_64`-only, mit 8.4 kam auch `aarch64`
+
+.footnote[.red.bold[*] lateinisch für Seele]
+
+]
+
+.right-column25[
+
+![:img AlmaLinux-Logo, 100%](imgs/alma_linux.jpg)
+
+]
+
+???
+
+- CloudLinux OS = speziell auf Hosting angepasster Fork mit Eigenentwicklungen (*z.B. Management-Panel-Integration, etc.*)
+---
+## AlmaLinux.red[*]
+
+.left-column75[
+
+- Hersteller gibt an jährlich **1 Million USD** in die Entwicklung zu investieren
+  - "*Forever free*"
+- Erstes Release am **30.03**, [Migrationsskript auf GitHub](https://github.com/AlmaLinux/almalinux-deploy) verfügbar
+
+.footnote[.red.bold[*] lateinisch für Seele]
+
+]
+
+.right-column25[
+
+![:img AlmaLinux-Logo, 100%](imgs/alma_linux.jpg)
+
+]
+---
+## Navy Linux
+
+.left-column75[
+
+- Eher unbekanntes Projekt, von **Unixlab**.red[*] gegründet
+- verspricht ebenfalls ein 1:1 CentOS-Klon zu sein
+- Soll vollständig von einer Community gepflegt werden
+  - Derzeit sollen diverse Teams gegründet werden
+- Seit Juli existiert die Non-Profit Organization **Navy Foundation**
+
+.footnote[.red.bold[*] unklar, wer dahinter steckt]
+
+]
+
+.right-column25[
+
+![:img Navy Linux-Logo, 100%](imgs/navy_linux.png)
+
+]
+
+???
+
+- Dubios, da keine Informationen über Unixlab
+- Delaware Non-Profit Corporation 501c3
+---
+## Navy Linux
+
+.left-column75[
+
+- Für 8.3 existierten Pakete, aber kein Installer
+- Im August erschien das erste stabile [8.4 Release](https://mirror.Navy Linux.org/Navy Linux/releases/8.4/)
+- derzeit lediglich für `x86_64`, `aarch64` und `ppc64le` [offensichtlich geplant](https://mirror.Navy Linux.org/selr/releases/8/)
+- Zukunft fragwürdig
+- Mit **SELR** ist ein EPEL.red[*]-Fork geplant
+  - beinhaltet derzeit lediglich spezifische Ceph-, Docker-, Gluster-, NFS Ganesha- und Samba-Versionen
+
+.footnote[.red.bold[*] [Extra Packages for Enterprise Linux](https://fedoraproject.org/wiki/EPEL)]
+
+]
+
+.right-column25[
+
+![:img Navy Linux-Logo, 100%](imgs/navy_linux.png)
+
+]
+
+???
+
+- Dubios, da keine Informationen über Unixlab
+- SELR = **S**table **E**nterprise **L**inux **R**epository
+---
+class: small
+
+## Vergleich
+
+|   | RHEL | Rocky Linux | AlmaLinux | Navy Linux |
+| - | ---- | ----------- | --------- | ---------- |
+| Architekturen | x86_64, aarch64, s390z, ppc64 | x86_64, aarch64 | x86_64, aarch64 | x86_64 |
+| Vagrantbox | Ja | Ja | Ja | Nein |
+| Verfügbare Pakete | ~6.300 | ~5.300 | ~ 5.300 | ~6.600 |
+| Mirror | unbekannt (CDN) | ~90 | ~130 | 3 |
+| Migration | CentOS 7/8, Oracle Linux [ab 8.3](https://bugzilla.redhat.com/show_bug.cgi?id=1944815) | [CentOS 8](https://github.com/rocky-linux/rocky-tools/tree/main/migrate2rocky) | [CentOS, RHEL, Rocky Linux, Oracle Linux](https://github.com/AlmaLinux/almalinux-deploy) | - |
+| Support | Ja | unklar | in Diskussion | unklar |
+| Secure Boot | Geplant | Ja | Nein | unklar |
+---
+## Migrationsskripte
+
+Migration nach Rocky Linux:
+
+```shell
+# curl -LO https://raw.githubusercontent.com/rocky-linux/rocky-tools/main/
+migrate2rocky/migrate2rocky.sh
+# bash migrate2rocky.sh -rV
+```
+
+Migration nach AlmaLinux:
+
+```shell
+# curl -LO https://raw.githubusercontent.com/AlmaLinux/almalinux-deploy/master/
+almalinux-deploy.sh
+# bash almalinux-deploy.sh
+```
+---
+## Release-Abstände
+
+RHEL 8.4 erschien am 18.05.2021.
+
+- AlmaLinux 8.4: 26.05.2021 (**8 Tage**)
+  - `aarch64` 8.4: 30.06.2021 (**43 Tage**)
+- Rocky Linux 8.4: 21.06.2021 (**34 Tage**)
+- Navy Linux 8.4: 01.08.2021 (**75 Tage**)
+---
+## Update-Zyklen
+
+- Den meisten Anwender:innen sind schnell veröffentlichte Patches wichtig
+  - Wie **schnell** sind die jeweiligen Forks?
+- Auswertung über die letzten **~2,5 Monate** (*01.06-17.08.2021*)
+--
+
+- Für den Vergleich wurden die folgenden **Quellen** herangezogen:
+  - [Red Hat Security Advisories](https://access.redhat.com/security/security-updates/)
+  - [RockyLinux Errata](https://errata.rockylinux.org/)
+  - [AlmaLinux Errata](https://errata.almalinux.org/)
+- Navy Linux stellt derzeit keine Errata-Informationen zur Verfügung
+- Die vollständige tabellarische Auswertung ist hier zu finden: [[klick!]](https://github.com/stdevel/froscon2021-wtfaq-centos/blob/main/errata_drift.xlsx)
+---
+![:img Auswertung, 100%](imgs/errata_drift.png)
+---
+class: small
+
+## Update-Zyklen
+
+.left-column[
+
+- AlmaLinux liefert i.d.R. am **gleichen** oder nächsten Tag 🚀
+- Rocky Linux hatte bis **Mitte Juli** deutliche **Probleme** Patches zeitnah bereitzustellen
+  - seitdem werden Patches spätestens am (*über*)nächsten Tag ausgeliefert
+- nicht jeder Patch wird von den Forks nachgebaut
+- **1** RHEL-Patch von Rocky Linux, aber nicht von AlmaLinux ausgeliefert:
+  - [RHSA-2021:3152](https://access.redhat.com/errata/RHSA-2021:3152) (*exiv2, Exif metadata library*)
+
+]
+
+.right-column[
+
+- **9** Patches von AlmaLinux, aber nicht von Rocky Linux ausgeliefert:
+  - [RHSA-2021:2566](https://access.redhat.com/errata/RHSA-2021:2566) (*`fwupd`*)
+  - [RHSA-2021:2743](https://access.redhat.com/errata/RHSA-2021:2743) (*Firefox*)
+  - [RHSA-2021:2988](https://access.redhat.com/errata/RHSA-2021:2988) (*`varnish`*)
+  - [RHSA-2021:3020](https://access.redhat.com/errata/RHSA-2021:3020) (*Ruby 2.7*)
+  - [RHSA-2021:3027](https://access.redhat.com/errata/RHSA-2021:3027) (*`microcode_ctl`*)
+  - [RHSA-2021:3066](https://access.redhat.com/errata/RHSA-2021:3066) (*`edk2`, QEMU UEFI*)
+  - [RHSA-2021:3075](https://access.redhat.com/errata/RHSA-2021:3075) (*`libuv`, async I/O*)
+  - [RHSA-2021:3076](https://access.redhat.com/errata/RHSA-2021:3076) (*`go-toolset`*)
+  - [RHSA-2021:3079](https://access.redhat.com/errata/RHSA-2021:3079) (*`389-ds`*)
+
+]
+---
+class: center, middle
+
+# Alternativen
+---
+## Oracle Linux
+
+.left-column75[
+
+- Seit 2006 von Oracle gepflegte Enterprise Linux-Distribution
+- bietet **optionalen** Linux-Kernel mit Oracle-Anpassungen
+- [Migrationsskript](https://github.com/oracle/centos2ol) auf GitHub verfügbar
+  - Unterstützt CentOS 6 bis 8
+  - CentOS Stream wird **nicht** unterstützt
+
+]
+
+.right-column25[
+
+![:img Oracle Linux-Logo, 100%](imgs/oracle_linux.jpg)
+
+]
+---
+## Oracle Linux
+
+.left-column75[
+
+- **Vorteile**
+  - Binärkompatibel, gleiche Code-Basis
+  - geringerer Migrationsaufwand
+- **Nachteile**
+  - Nur für `x86_64` und `aarch64` erhältlich
+  - Zukunft fragwürdig, Hersteller hat geringes OSS-Interesse.red[*]
+
+.footnote[.red.bold[*] siehe OpenSolaris, Java, OpenOffice,...]
+
+]
+
+.right-column25[
+
+![:img Oracle Linux-Logo, 100%](imgs/oracle_linux.jpg)
+
+]
+
+???
+
+- CentOS 8 ist auch für `ppc64le` erhältlich
+---
+## openSUSE
+
+.left-column75[
+
+- Seit 2006 von der Community gepflegte Distribution
+  - 4 von 6 Board-Mitgliedern gehören **nicht** zu SUSE
+- Basis für kommerzielles **SUSE Linux Enterprise**
+- In zwei Editionen verfügbar:
+  - **Leap** - stabil, Upstream.red[*] zu SLE
+  - **Tumbleweed** - Rolling Release, Entwicklerversion
+- Support unterstützt Migration von Leap zu SLES
+
+.footnote[.red.bold[*] zu ~90% zutreffend, in [15.3](https://www.suse.com/c/how-suse-builds-its-enterprise-linux-distribution-part-5/) wurde der Build-Prozess weiter vereinheitlicht]
+
+]
+
+.right-column25[
+
+![:img openSUSE-Logo, 100%](imgs/opensuse.png)
+
+]
+---
+## openSUSE
+
+.left-column75[
+
+- **Vorteile**
+  - gleiches Paketformat
+  - aktives Projekt mit hohem Community-Gedanken
+- **Nachteile**
+  - andere Distribution, Umgewöhnung notwendig
+  - kurze Wartungszeit (18 Monate.red[*])
+  - häufigere Upgrades notwendig
+
+.footnote[.red.bold[*] Minor-Releases alle 12 Monate, 6 Monate Migrationszeit]
+
+]
+
+.right-column25[
+
+![:img openSUSE-Logo, 100%](imgs/opensuse.png)
+
+]
+---
+## Ubuntu
+
+.left-column75[
+
+- Seit 2004 von der Community gepflegte Distribution
+- basierend auf Debian-Paketformat
+- **beliebteste** Distribution im Hosting, in Public Clouds und Container-Images
+- Zwei Releases jedes Jahr (*.04, .10*)
+  - werden **9 Monate** unterstützt
+- **Long Term Support**-Release alle 2 Jahre im April, 5 Jahre Unterstützung
+
+]
+
+.right-column25[
+
+![:img Ubuntu-Logo, 100%](imgs/ubuntu.png)
+
+]
+---
+## Ubuntu
+
+.left-column75[
+
+- Durch **Extended Security Maintenance**.red[*] sind 5 weitere Jahre möglich
+- [bedeutend günstiger](https://ubuntu.com/advantage) als RHEL und SLES
+  - Essential ohne Support: **225 USD** pro Host + unlimitiert VMs
+  - Mit 8x5 bzw. 24x7 Support: **750 USD** bzw. **1.500 USD** pro Host + unlimitiert VMs
+
+.footnote[.red.bold[*] ab 18.04]
+
+]
+
+.right-column25[
+
+![:img Ubuntu-Logo, 100%](imgs/ubuntu.png)
+
+]
+
+???
+
+- Versionen vor 18.04: **3** Jahre ESM
+---
+## Ubuntu
+
+.left-column75[
+
+- **Vorteile**
+  - kostenlos nutzbar
+  - bis zu 10 Jahre lang nutzbar (*gegen Aufpreis*)
+- **Nachteile**
+  - anderes Paketsystem und andere Distribution, größere Umgewöhnung
+  - ohne Automatismus höherer Migrationsaufwand
+  - Hersteller treibt neue Ideen aggressiv voran.red[*]
+
+.footnote[.red.bold[*] siehe [Unity](https://w.wiki/36kV), [Mir](https://w.wiki/36kW), [Snap](https://w.wiki/36kX), [Amazon Desktop-Suche](https://askubuntu.com/questions/192269/how-can-i-remove-amazon-search-results-from-the-dash-or-disable-the-feature),...]
+
+]
+
+.right-column25[
+
+![:img Ubuntu-Logo, 100%](imgs/ubuntu.png)
+
+]
+---
+class: center, middle
+
+# Ausblick
+---
+## Ausblick
+
+Verschiedene Optionen kommen in Betracht:
+
+- CentOS 7-Support endet erst **2024**
+- CentOS Stream ist stabiler als die meisten denken
+  - es ist zwar Rolling Release, aber **kein** Bleeding Edge
+  - valide Option, sofern keine Bugkompatibilität gefordert ist
+--
+
+- Tendenziell AlmaLinux oder Rocky Linux benutzen
+- Migration auf andere Distribution auch denkbar
+  - openSUSE / SUSE Linux Enterprise, Ubuntu,...
+  - voraussichtlich (*deutlich*) höherer Aufwand
+--
+
+- Keine generelle Lösung, "*it depends*" 🙃
+---
+## Links
+
+- AlmaLinux-Webseite: [[klick!]](https://almalinux.org)
+- Rocky Linux-Webseite: [[klick!]](https://rockylinux.org)
+- Navy Linux-Webseite: [[klick!]](https://www.navylinux.org)
+- Podcast über CentOS und Rocky Linux mit Gregory Kurtzer: [[klick!]](https://changelog.com/podcast/427)
+- SVA-Podcast über CentOS und denkbare Alternativen: [[klick!]](https://ageofdevops.de/index.php/podcast/e13/)
+---
+class: center, middle
+
+## Danke für die Aufmerksamkeit
+
+### (Fragen?)
+
+![:img Obama Micdrop, 65%](imgs/obama_micdrop.gif)
+
+    </textarea>
+
+    <script src="remark-latest.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      // macro for image scaling
+      // see also: https://github.com/gnab/remark/issues/72#issuecomment-419693263_
+      remark.macros.img = function (altText, width) {
+        var url = this;
+        return '<img alt="' + altText + '" src="' + url + '" style="width: ' + width + '" />';
+      };
+      // starting slideshow
+      var slideshow = remark.create({
+        // override factor from 4:3 to 16:9
+        ratio: '16:9',
+        // override footer
+        slideNumberFormat: '%current% | %total%',
+        // enable line highlightning
+        highlightLines: true
+      });
+    </script>
+  </body>
+</html>
