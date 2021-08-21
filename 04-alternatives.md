@@ -2,6 +2,8 @@ class: center, middle
 
 # Alternativen
 
+![:img Linux Distros everywhere, 60%](imgs/linux_distros.jpg)
+
 ---
 
 ## Oracle Linux

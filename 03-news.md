@@ -38,11 +38,21 @@ Die Petition erreicht in kurzer Zeit 10.000 Unterschriften
 
 ## Forks
 
+.left-column[
+
 Innerhalb weniger Tage entstanden mehrere Projekte:
 
 - [Rocky Linux](https://rockylinux.org/)
-- [AlmaLinux](https://almalinux.org/) (*aka Codename Lenix*)
+- [AlmaLinux](https://almalinux.org/) (*Codename Lenix*)
 - [Navy Linux](https://www.Navy Linux.org/)
+
+]
+
+.right-column[
+
+![:img Fork CentOS-Meme, 66%](imgs/fork_centos.jpg)
+
+]
 
 ---
 
@@ -175,7 +185,7 @@ Innerhalb weniger Tage entstanden mehrere Projekte:
 
 - Für 8.3 existierten Pakete, aber kein Installer
 - Im August erschien das erste stabile [8.4 Release](https://mirror.Navy Linux.org/Navy Linux/releases/8.4/)
-- derzeit lediglich für `x86_64`, `aarch64` und `ppc64le` [offensichtlich geplant](https://mirror.Navy Linux.org/selr/releases/8/)
+- derzeit lediglich für `x86_64` verfügbar, `aarch64` und `ppc64le` jedoch [offensichtlich geplant](https://mirror.navylinux.org/selr/releases/8/)
 - Zukunft fragwürdig
 - Mit **SELR** ist ein EPEL.red[*]-Fork geplant
   - beinhaltet derzeit lediglich spezifische Ceph-, Docker-, Gluster-, NFS Ganesha- und Samba-Versionen
@@ -258,9 +268,20 @@ RHEL 8.4 erschien am 18.05.2021.
 - Navy Linux stellt derzeit keine Errata-Informationen zur Verfügung
 - Die vollständige tabellarische Auswertung ist hier zu finden: [[klick!]](https://github.com/stdevel/froscon2021-wtfaq-centos/blob/main/errata_drift.xlsx)
 
+???
+
+- Sicherheitsfixes für OS ohne aufpreispflichtige Erweiterungen (*HA, Realtime, Cluster*)
+
 ---
 
 ![:img Auswertung, 100%](imgs/errata_drift.png)
+
+???
+
+- AlmaLinux liefert sehr schnell
+  - offensichtlich kleiner Fehler in den Metadaten
+- Rocky Linux hatte anfangs große Probleme zeitnah zu liefern
+  - Lücken in Errata
 
 ---
 
@@ -273,6 +294,7 @@ class: small
 - AlmaLinux liefert i.d.R. am **gleichen** oder nächsten Tag 🚀
 - Rocky Linux hatte bis **Mitte Juli** deutliche **Probleme** Patches zeitnah bereitzustellen
   - seitdem werden Patches spätestens am (*über*)nächsten Tag ausgeliefert
+  - Errata-Pipeline anscheinend noch [nicht ausgereift](https://forums.rockylinux.org/t/some-errata-missing-in-comparison-with-rhel-and-almalinux/)
 - nicht jeder Patch wird von den Forks nachgebaut
 - **1** RHEL-Patch von Rocky Linux, aber nicht von AlmaLinux ausgeliefert:
   - [RHSA-2021:3152](https://access.redhat.com/errata/RHSA-2021:3152) (*exiv2, Exif metadata library*)
