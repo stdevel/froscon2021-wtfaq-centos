@@ -22,15 +22,16 @@ class: center, middle
 ## CentOS Stream
 
 - 2019 eingeführtes neues Projekt
-- Rolling Release-Modell
+- "kuratiertes Rolling Release-Modell"
 - Positioniert sich **zwischen** Fedora und RHEL
 - **Upstream** für nächstes RHEL Minor-Release (*z.B. 8.x*)
 - weniger stabil als RHEL, jedoch stabiler als Fedora
   - kein Bleeding Edge wie bei anderen Rolling Release-Distributionen (*z.B. ArchLinux, openSUSE Tumbleweed*)
 --
 
-- Für Entwicklungs- und Testzwecke unproblematisch
+- Für Entwicklung/Test unproblematisch, oftmals auch für Produktion geeignet
 - Wenn Bugkompatiblität zu RHEL benötigt wird jedoch **ungeeignet**
+- Sogar das CERN [setzt CentOS Stream produktiv](https://indico.cern.ch/event/1070475/contributions/4511844/attachments/2309304/3929738/lfc03-20210915-NoNDA.pdf) für viele Bereiche ein
 
 ---
 

@@ -14,9 +14,8 @@ Verschiedene Optionen kommen in Betracht:
   - valide Option, sofern keine Bugkompatibilität gefordert ist
 --
 
-- Tendenziell AlmaLinux oder Rocky Linux benutzen
+- Tendenziell AlmaLinux oder Rocky Linux benutzen falls diese benötigt wird
 - Migration auf andere Distribution auch denkbar
-  - openSUSE / SUSE Linux Enterprise, Ubuntu,...
   - voraussichtlich (*deutlich*) höherer Aufwand
 --
 
@@ -30,7 +29,7 @@ Verschiedene Optionen kommen in Betracht:
 - Rocky Linux-Webseite: [[klick!]](https://rockylinux.org)
 - Navy Linux-Webseite: [[klick!]](https://www.navylinux.org)
 - Podcast über CentOS und Rocky Linux mit Gregory Kurtzer: [[klick!]](https://changelog.com/podcast/427)
-- SVA-Podcast über CentOS und denkbare Alternativen: [[klick!]](https://ageofdevops.de/index.php/podcast/e13/)
+- SVA-Podcast über CentOS und denkbare Alternativen (*Mai 2021*): [[klick!]](https://ageofdevops.de/index.php/podcast/e13/)
 
 ---
 

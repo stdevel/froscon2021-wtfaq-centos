@@ -37,7 +37,7 @@ class: center, middle
   - Nur für `x86_64` und `aarch64` erhältlich
   - Zukunft fragwürdig, Hersteller hat geringes OSS-Interesse.red[*]
 
-.footnote[.red.bold[*] siehe OpenSolaris, Java, OpenOffice,...]
+.footnote[.red.bold[*] siehe OpenSolaris, Java, OpenOffice, ZFS...]
 
 ]
 
@@ -126,12 +126,10 @@ class: center, middle
 
 .left-column75[
 
-- Durch **Extended Security Maintenance**.red[*] sind 5 weitere Jahre möglich
+- Durch **Extended Security Maintenance** sind 5 weitere Jahre möglich
 - [bedeutend günstiger](https://ubuntu.com/advantage) als RHEL und SLES
   - Essential ohne Support: **225 USD** pro Host + unlimitiert VMs
   - Mit 8x5 bzw. 24x7 Support: **750 USD** bzw. **1.500 USD** pro Host + unlimitiert VMs
-
-.footnote[.red.bold[*] ab 18.04]
 
 ]
 
@@ -140,10 +138,6 @@ class: center, middle
 ![:img Ubuntu-Logo, 100%](imgs/ubuntu.png)
 
 ]
-
-???
-
-- Versionen vor 18.04: **3** Jahre ESM
 
 ---
 
@@ -159,7 +153,7 @@ class: center, middle
   - ohne Automatismus höherer Migrationsaufwand
   - Hersteller treibt neue Ideen aggressiv voran.red[*]
 
-.footnote[.red.bold[*] siehe [Unity](https://w.wiki/36kV), [Mir](https://w.wiki/36kW), [Snap](https://w.wiki/36kX), [netplan](https://netplan.io/), [multipass](https://multipass.run/), [Amazon Desktop-Suche](https://askubuntu.com/questions/192269/how-can-i-remove-amazon-search-results-from-the-dash-or-disable-the-feature),...]
+.footnote[.red.bold[*] siehe [Unity](https://w.wiki/36kV), [Mir](https://w.wiki/36kW), [Snap](https://w.wiki/36kX), [netplan](https://netplan.io/), [Amazon Desktop-Suche](https://askubuntu.com/questions/192269/how-can-i-remove-amazon-search-results-from-the-dash-or-disable-the-feature),...]
 
 ]
 

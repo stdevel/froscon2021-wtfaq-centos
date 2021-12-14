@@ -15,7 +15,7 @@ Community reagierte.red[*] ablehnend, lenkte Red Hat ein:
   - Red Hat Kundenkonto benötigt
 - Lösung nur für kleinere Kund:innen anwendbar
 
-.footnote[.red.bold[*] siehe z.B. [folgende Petition](https://www.change.org/p/centos-governing-board-do-not-destroy-centos-by-using-it-as-a-rhel-upstream) oder [centos.rip](https://centos.rip)]
+.footnote[.red.bold[*] siehe z.B. [folgende Petition](https://www.change.org/p/centos-governing-board-do-not-destroy-centos-by-using-it-as-a-rhel-upstream)]
 
 ???
 
@@ -99,7 +99,7 @@ Bereits aktive (kommerzielle) Forks:
 - [Communitysatzung](https://forums.rockylinux.org/t/community-charter/1933) und [bessere Struktur](https://forums.rockylinux.org/t/organizational-structure/1932) soll Probleme verhindern
 - Build-Infrastruktur u.a. auf AWS
 - RC erschien Ende April auf Basis von 8.3
-- Stabile Version im **Juni** erschienen (*8.4*)
+- Stabile Version im **Juni 2021** erschienen (*8.4*)
 
 ]
 
@@ -124,6 +124,7 @@ Bereits aktive (kommerzielle) Forks:
   - Hat mit [CloudLinux OS](https://www.cloudlinux.com/all-products/product-overview/cloudlinuxos) schon einen kommerziellen RHEL-Fork erstellt
 - 100% Bug-kompatibel mit RHEL
 - zuerst `x86_64`-only, mit 8.4 kam auch `aarch64`
+- Erstes Release am **30.03.2021**
 
 .footnote[.red.bold[*] lateinisch für Seele]
 
@@ -141,15 +142,17 @@ Bereits aktive (kommerzielle) Forks:
 
 ---
 
-## AlmaLinux.red[*]
+## AlmaLinux
 
 .left-column75[
 
 - Hersteller gibt an jährlich **1 Million USD** in die Entwicklung zu investieren
   - "*Forever free*"
-- Erstes Release am **30.03**, [Migrationsskript auf GitHub](https://github.com/AlmaLinux/almalinux-deploy) verfügbar
-
-.footnote[.red.bold[*] lateinisch für Seele]
+- [Management-Board](https://almalinux.org/foundation/members/) umfasst derzeit 5 Leute
+  - CEO [verließ Board](https://blog.cloudlinux.com/why-i-have-decided-to-step-down-from-the-almalinux-os-foundation-board) da "er nicht mehr gebraucht wird"
+- [Open Office Hours](https://almalinux.org/blog/almalinux-open-office-hours/) mit Core-Team jeden Montag
+- Verschiedene [SIGs](https://wiki.almalinux.org/sigs/) für spezielle Themen (*z.B. Cloud*)
+- [Foundation Memberships](https://almalinux.org/foundation/members/) für Mirroring, Sponsoring oder Contributions
 
 ]
 
@@ -170,7 +173,7 @@ Bereits aktive (kommerzielle) Forks:
 - Soll vollständig von einer Community gepflegt werden
   - Derzeit sollen diverse Teams gegründet werden
   - derzeit 4 Core-Mitglieder, ~80 Slack-User
-- Seit Juli existiert die Non-Profit Organization **Navy Foundation**
+- Seit Juli 2021 existiert die Non-Profit Organization **Navy Foundation**
 
 .footnote[.red.bold[*] unklar, wer dahinter steckt]
 
@@ -194,7 +197,7 @@ Bereits aktive (kommerzielle) Forks:
 .left-column75[
 
 - Für 8.3 existierten Pakete, aber kein Installer
-- Im August erschien das erste stabile [8.4 Release](https://mirror.Navy Linux.org/Navy Linux/releases/8.4/)
+- Im August erschien das erste stabile [8.4 Release](https://mirror.navylinux.org/navylinux/releases/8.4/)
 - derzeit lediglich für `x86_64` verfügbar, `aarch64` und `ppc64le` jedoch [offensichtlich geplant](https://mirror.navylinux.org/selr/releases/8/)
 - Zukunft fragwürdig
 - Mit **SELR** ist ein EPEL.red[*]-Fork geplant
@@ -226,10 +229,11 @@ class: small
 | Architekturen | x86_64, aarch64, s390z, ppc64 | x86_64, aarch64 | x86_64, aarch64 | x86_64 |
 | Vagrantbox | Ja | Ja | Ja | Nein |
 | Verfügbare Pakete | ~6.300 | ~5.300 | ~ 5.300 | ~6.600 |
-| Mirror | unbekannt (CDN) | ~90 | ~130 | 3 |
+| Mirror | unbekannt (CDN) | ~120 | ~170 | 5 |
 | Migration | CentOS 7/8, Oracle Linux [ab 8.3](https://bugzilla.redhat.com/show_bug.cgi?id=1944815) | [CentOS 8](https://github.com/rocky-linux/rocky-tools/tree/main/migrate2rocky) | [CentOS, RHEL, Rocky Linux, Oracle Linux](https://github.com/AlmaLinux/almalinux-deploy) | - |
-| Support | Ja | unklar | in Diskussion | unklar |
-| Secure Boot | Geplant | Ja | Nein | unklar |
+| Support | ja | ja (z.B. CIQ) | ja | unklar |
+| Secure Boot | ja | ja | nein | unklar |
+| Community | [Customer Portal Community](https://access.redhat.com/community) | [Forum](https://forums.rockylinux.org), [Chat](https://chat.rockylinux.org) | [Discourse](https://almalinux.discourse.group/), [Chat](https://chat.almalinux.org/) | [Chat](https://navylinux.slack.com/) |
 
 ---
 
@@ -253,14 +257,42 @@ almalinux-deploy.sh
 
 ---
 
+## AlmaLinux ELevate
+
+- Von der [AlmaLinux-Community entwickeltes Tool](https://almalinux.org/elevate)
+- Tool zum Migrieren von CentOS 7 nach EL8:
+  - CentOS Stream
+  - AlmaLinux / Rocky Linux
+  - Oracle Linux 8
+- basierend auf [Red Hat LEAPP](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
+- Quellcode [auf GitHub verfügbar](https://github.com/AlmaLinux/leapp-repository/tree/almalinux)
+
+---
+
 ## Release-Abstände
+
+.left-column[
 
 RHEL 8.4 erschien am 18.05.2021.
 
-- AlmaLinux 8.4: 26.05.2021 (**8 Tage**)
-  - `aarch64` 8.4: 30.06.2021 (**43 Tage**)
-- Rocky Linux 8.4: 21.06.2021 (**34 Tage**)
-- Navy Linux 8.4: 01.08.2021 (**75 Tage**)
+- AlmaLinux: 26.05.2021 (**8 Tage**)
+  - `aarch64`: 30.06.2021 (**43 Tage**)
+- Rocky Linux: 21.06.2021 (**34 Tage**)
+- Navy Linux: 01.08.2021 (**75 Tage**)
+- CentOS: 03.06.2021 (**16 Tage**)
+
+]
+
+.right-column[
+
+RHEL 8.5 erschien am 09.11.2021.
+
+- AlmaLinux: 11.11.2021 (**2 Tage**)
+- Rocky Linux: 18.11.2021 (**7 Tage**)
+- CentOS: 26.11.2021 (**15 Tage**)
+- Navy Linux: 🤷🏻‍♂️
+
+]
 
 ---
 
@@ -268,7 +300,7 @@ RHEL 8.4 erschien am 18.05.2021.
 
 - Den meisten Anwender:innen sind schnell veröffentlichte Patches wichtig
   - Wie **schnell** sind die jeweiligen Forks?
-- Auswertung vom *01.06.2021 - 27.09.2021*
+- Auswertung vom *01.06.2021 - 09.12.2021*
 --
 
 - Für den Vergleich wurden die folgenden **Quellen** herangezogen:
@@ -295,33 +327,13 @@ RHEL 8.4 erschien am 18.05.2021.
 
 ---
 
-class: small
-
 ## Update-Zyklen
 
-.left-column[
-
-- AlmaLinux liefert i.d.R. am **gleichen** oder nächsten Tag 🚀
+- AlmaLinux liefert im Mittel innerhalb von **2 Tagen** 🚀
 - Rocky Linux hatte bis **Mitte Juli** deutliche **Probleme** Patches zeitnah bereitzustellen
-  - seitdem werden Patches spätestens am (*über*)nächsten Tag ausgeliefert
+  - seitdem werden Patches i.d.r. innerhalb von **17 Tagen** ausgeliefert
   - Errata-Pipeline anscheinend noch [nicht ausgereift](https://forums.rockylinux.org/t/some-errata-missing-in-comparison-with-rhel-and-almalinux/)
+  - Messbarkeit, wie "schnell" Rocky Linux liefert ist so leider komplex
 - nicht jeder Patch wird von den Forks nachgebaut
-- **1** RHEL-Patch von Rocky Linux, aber nicht von AlmaLinux ausgeliefert:
-  - [RHSA-2021:3152](https://access.redhat.com/errata/RHSA-2021:3152) (*exiv2, Exif metadata library*)
-
-]
-
-.right-column[
-
-- **9** Patches von AlmaLinux, aber nicht von Rocky Linux ausgeliefert:
-  - [RHSA-2021:2566](https://access.redhat.com/errata/RHSA-2021:2566) (*`fwupd`*)
-  - [RHSA-2021:2743](https://access.redhat.com/errata/RHSA-2021:2743) (*Firefox*)
-  - [RHSA-2021:2988](https://access.redhat.com/errata/RHSA-2021:2988) (*`varnish`*)
-  - [RHSA-2021:3020](https://access.redhat.com/errata/RHSA-2021:3020) (*Ruby 2.7*)
-  - [RHSA-2021:3027](https://access.redhat.com/errata/RHSA-2021:3027) (*`microcode_ctl`*)
-  - [RHSA-2021:3066](https://access.redhat.com/errata/RHSA-2021:3066) (*`edk2`, QEMU UEFI*)
-  - [RHSA-2021:3075](https://access.redhat.com/errata/RHSA-2021:3075) (*`libuv`, async I/O*)
-  - [RHSA-2021:3076](https://access.redhat.com/errata/RHSA-2021:3076) (*`go-toolset`*)
-  - [RHSA-2021:3079](https://access.redhat.com/errata/RHSA-2021:3079) (*`389-ds`*)
-
-]
+  - z.B. Kernel Live-Patching
+  - für manche Paket-Upgrades scheinen Patches zu fehlen
